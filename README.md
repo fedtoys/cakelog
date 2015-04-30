@@ -2,7 +2,7 @@
 Cakelog
 =======
 
-The FEDs log of all things cakey.  
+The FED's log of all things cakey.  
 http://thefeds.github.io/cakelog/
 
 
