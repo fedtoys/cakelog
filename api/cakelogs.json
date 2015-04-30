@@ -1,0 +1,21 @@
+---
+layout: null
+---
+
+[
+    {% assign cakelogs = site.data.cakelogs | sort: 'date' | reverse %}
+    {% for cakelog in cakelogs %}
+        {% assign person = null %}
+        {% for currentPerson in site.data.people %}
+            {% if cakelog.person == currentPerson.id %}
+                {% assign person = currentPerson %}
+            {% endif %}
+        {% endfor %}
+        {
+            "date": "{{cakelog.date | date: '%Y-%m-%d'}}",
+            "person": {{person | jsonify}},
+            "description": {{cakelog.description | jsonify}}
+        }
+        {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+]

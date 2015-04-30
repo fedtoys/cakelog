@@ -1,0 +1,38 @@
+---
+layout: null
+---
+
+[
+    {% assign people = site.data.people | sort: 'name' %}
+    {% assign cakelogs = site.data.cakelogs | sort: 'date' %}
+    {% for person in people %}
+
+        {% capture cakelogsJson %}
+            {% for cakelog in cakelogs %}
+                {% if cakelog.person == person.id %}
+                    {
+                        "date": "{{cakelog.date | date: '%Y-%m-%d'}}",
+                        "description": {{cakelog.description | jsonify}}
+                    }
+                    [SPLIT]
+                {% endif %}
+            {% endfor %}
+        {% endcapture %}
+
+        {% assign cakelogsJson = cakelogsJson | split: '[SPLIT]' %}
+
+        {
+            "id": {{person.id | jsonify}},
+            "name": {{person.name | jsonify}},
+            "cakelogs": [
+                {% for cakelog in cakelogsJson %}
+                    {% if forloop.rindex > 1 %}
+                        {{cakelog}}
+                        {% unless forloop.rindex == 2 %},{% endunless %}
+                    {% endif %}
+                {% endfor %}
+            ]
+        }
+        {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+]
