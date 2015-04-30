@@ -7,23 +7,33 @@ layout: null
     {% assign cakelogs = site.data.cakelogs | sort: 'date' %}
     {% for person in people %}
 
+        {% assign personTags = '' %}
+
         {% capture cakelogsJson %}
             {% for cakelog in cakelogs %}
                 {% if cakelog.person == person.id %}
                     {
                         "date": "{{cakelog.date | date: '%Y-%m-%d'}}",
-                        "description": {{cakelog.description | jsonify}}
+                        "description": {{cakelog.description | jsonify}},
+                        "tags": {{cakelog.tags | sort | jsonify}}
                     }
+                    {% for tag in cakelog.tags %}
+                        {% unless personTags contains tag | prepend ',' %}
+                            {% assign personTags = personTags | append: ',' | append: tag %}
+                        {% endunless %}
+                    {% endfor %}
                     [SPLIT]
                 {% endif %}
             {% endfor %}
         {% endcapture %}
 
         {% assign cakelogsJson = cakelogsJson | split: '[SPLIT]' %}
+        {% assign personTags = personTags | remove_first: ',' | split: ',' | sort %}
 
         {
             "id": {{person.id | jsonify}},
             "name": {{person.name | jsonify}},
+            "tags": {{personTags | jsonify}},
             "cakelogs": [
                 {% for cakelog in cakelogsJson %}
                     {% if forloop.rindex > 1 %}

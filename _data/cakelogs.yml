@@ -7,12 +7,23 @@
 # date: should be an ISO 8601 date (no time required)
 # person: should be the id of the person who brought cake (see people.yml)
 # description: should be a description of the cake
+# tags: should be a list of tags for the cake. Each tag must be lowercased and hyphenated
 #
 
 - date: 2015-04-24
   person: glynn
   description: Lemon & Thyme cake. Homemade. Phil didn't get any.
+  tags:
+    - homemade
+    - lemon
+    - thyme
 
 - date: 2015-04-30
   person: glynn
   description: Peanut butter & chocolate flapjacks, traditional flapjacks with fruit. Homemade. Well good.
+  tags:
+    - homemade
+    - flapjack
+    - fruit
+    - chocolate
+    - peanut

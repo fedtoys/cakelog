@@ -13,4 +13,10 @@
     <p>
         {{cakelog.description}}
     </p>
+    <ul class="tag-list">
+        {% assign tags = cakelog.tags | sort %}
+        {% for tag in tags %}
+            <li>{{tag}}</li>
+        {% endfor %}
+    </ul>
 </div>

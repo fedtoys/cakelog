@@ -14,7 +14,8 @@ layout: null
         {
             "date": "{{cakelog.date | date: '%Y-%m-%d'}}",
             "person": {{person | jsonify}},
-            "description": {{cakelog.description | jsonify}}
+            "description": {{cakelog.description | jsonify}},
+            "tags": {{cakelog.tags | sort | jsonify}}
         }
         {% unless forloop.last %},{% endunless %}
     {% endfor %}
