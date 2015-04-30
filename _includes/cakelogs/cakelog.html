@@ -1,0 +1,16 @@
+
+<!-- Cakelog -->
+<div>
+    <h3>
+        <time datetime="{{cakelog.date | date: '%Y-%m-%dT%H:%M:%SZ'}}">{{cakelog.date | date: '%d %B %Y'}}</time>:
+        {% for person in site.data.people %}
+            {% if cakelog.person == person.id %}
+                {{person.name}}
+            {% endif %}
+        {% endfor %}
+        brought cake in!
+    </h3>
+    <p>
+        {{cakelog.description}}
+    </p>
+</div>

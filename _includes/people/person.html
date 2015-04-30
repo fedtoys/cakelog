@@ -1,0 +1,18 @@
+
+{% assign count = 0 %}
+
+{% for cakelog in site.data.cakelogs %}
+    {% if cakelog.person == person.id %}
+        {% assign count = count | plus: 1 %}
+    {% endif %}
+{% endfor %}
+
+<!-- Person -->
+<div>
+    <h3>
+        {{person.name}}
+    </h3>
+    <p>
+        Brought in cakes {{count}} times.
+    </p>
+</div>

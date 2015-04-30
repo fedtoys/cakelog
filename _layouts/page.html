@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+
+    <!-- Page meta-information -->
+    <meta charset="utf-8"/>
+    <title>{{page.title}}</title>
+    <meta name="description" content="{{page.description}}"/>
+
+    <!-- Styles -->
+    <meta name="viewport" content="width=device-width"/>
+    <!--[if gt IE 7]><!-->
+        <link rel="stylesheet" href="/asset/style/site.css"/>
+    <!--<![endif]-->
+
+</head>
+<body>
+
+    <div role="banner">
+        <header>
+            {% include site/header.html %}
+        </header>
+    </div>
+
+    <div role="main">
+        {{content}}
+    </div>
+
+    <div role="contentinfo">
+        <footer>
+            {% include site/footer.html %}
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+
+# People
+# ======
+#
+# This is where people go. Add yourself (or cake bringers)
+# to this file.
+#
+# id: should be a unique identifier for the person
+# name: Should be the person's full name in title case
+#
+
+- id: adam
+  name: Adam Tavener
+
+- id: alex
+  name: Alex Kilgour
+
+- id: mee
+  name: Andrew Mee
+
+- id: walker
+  name: Andrew Walker
+
+- id: dawn
+  name: Dawn Budge
+
+- id: glynn
+  name: Glynn Phillips
+
+- id: hollie
+  name: Hollie Kay
+
+- id: jack
+  name: Jack Watkins
+
+- id: jose
+  name: Jose Bolos
+
+- id: jude
+  name: Jude Robinson
+
+- id: nick
+  name: Nick Call
+
+- id: phil
+  name: Phil Booth
+
+- id: rowan
+  name: Rowan Manning

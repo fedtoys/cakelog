@@ -1,0 +1,11 @@
+
+{% assign cakelogs = site.data.cakelogs | sort: 'date' | reverse %}
+
+<!-- Cakelogs -->
+<ol>
+    {% for cakelog in cakelogs %}
+        <li>
+            {% include cakelogs/cakelog.html %}
+        </li>
+    {% endfor %}
+</ol>

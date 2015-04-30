@@ -1,0 +1,18 @@
+
+# Cakelogs
+# ========
+#
+# This is where logs go. Add cake logs to this file.
+#
+# date: should be an ISO 8601 date (no time required)
+# person: should be the id of the person who brought cake (see people.yml)
+# description: should be a description of the cake
+#
+
+- date: 2015-04-29
+  person: rowan
+  description: He didn't really. The cake is a lie.
+
+- date: 2015-04-30
+  person: glynn
+  description: A delicious selection of flapjacks for the cake sale.

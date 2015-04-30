@@ -1,0 +1,11 @@
+
+{% assign people = site.data.people | sort: 'name' %}
+
+<!-- People -->
+<ul>
+    {% for person in people %}
+        <li>
+            {% include people/person.html %}
+        </li>
+    {% endfor %}
+</ul>
