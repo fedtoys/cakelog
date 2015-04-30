@@ -2,7 +2,8 @@
 Cakelog
 =======
 
-The FEDs log of all things cakey.
+The FEDs log of all things cakey.  
+http://thefeds.github.io/cakelog/
 
 
 Running Locally
