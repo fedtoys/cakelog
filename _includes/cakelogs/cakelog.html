@@ -4,6 +4,9 @@
 
 <!-- Cakelog -->
 <div>
+    {% if person.image %}
+        <img src="image/person/{{person.image}}" alt="{{person.name}}" width="40" height="40" class="person-image"/>
+    {% endif %}
     <h3>
         <time datetime="{{cakelog.date | date: '%Y-%m-%dT%H:%M:%SZ'}}">{{cakelog.date | date: '%d %B %Y'}}</time>:
         {{person.name}}

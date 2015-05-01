@@ -7,43 +7,85 @@
 #
 # id: should be a unique identifier for the person
 # name: Should be the person's full name in title case
+# image: Should be an image path relative to /image/person (not required)
+# isFED: Should be a boolean indicating whether the person is a FED
+# hasLeft: Should be a boolean indicating whether the person has left the company
 #
 
 - id: adam
   name: Adam Tavener
+  image: adam-tavener.jpg
+  isFED: true
+  hasLeft: false
 
 - id: alex
   name: Alex Kilgour
+  image: alex-kilgour.png
+  isFED: true
+  hasLeft: false
 
 - id: mee
   name: Andrew Mee
+  image: andrew-mee.jpg
+  isFED: true
+  hasLeft: false
 
 - id: walker
   name: Andrew Walker
+  image: andrew-walker.jpg
+  isFED: true
+  hasLeft: false
 
 - id: dawn
   name: Dawn Budge
+  image: dawn-budge.jpg
+  isFED: true
+  hasLeft: false
 
 - id: glynn
   name: Glynn Phillips
+  image: glynn-phillips.jpg
+  isFED: true
+  hasLeft: false
 
 - id: hollie
   name: Hollie Kay
+  image: hollie-kay.jpg
+  isFED: true
+  hasLeft: false
 
 - id: jack
   name: Jack Watkins
+  image: jack-watkins.png
+  isFED: true
+  hasLeft: false
 
 - id: jose
   name: Jose Bolos
+  image: jose-bolos.jpg
+  isFED: true
+  hasLeft: false
 
 - id: jude
   name: Jude Robinson
+  image: jude-robinson.jpg
+  isFED: true
+  hasLeft: false
 
 - id: nick
   name: Nick Call
+  image: nick-call.png
+  isFED: true
+  hasLeft: false
 
 - id: phil
   name: Phil Booth
+  image: phil-booth.jpg
+  isFED: true
+  hasLeft: false
 
 - id: rowan
   name: Rowan Manning
+  image: rowan-manning.png
+  isFED: true
+  hasLeft: false

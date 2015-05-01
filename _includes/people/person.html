@@ -4,6 +4,9 @@
 
 <!-- Person -->
 <div>
+    {% if person.image %}
+        <img src="image/person/{{person.image}}" alt="{{person.name}}" width="40" height="40" class="person-image"/>
+    {% endif %}
     <h3>
         {{person.name}}
     </h3>
