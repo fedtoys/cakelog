@@ -16,20 +16,24 @@
 </head>
 <body>
 
-    <div role="banner">
-        <header>
-            {% include site/header.html %}
-        </header>
-    </div>
+    <div class="page">
 
-    <div role="main">
-        {{content}}
-    </div>
+        <div role="banner" class="header">
+            <header>
+                {% include site/header.html %}
+            </header>
+        </div>
 
-    <div role="contentinfo">
-        <footer>
-            {% include site/footer.html %}
-        </footer>
+        <div role="main" class="main">
+            {{content}}
+        </div>
+
+        <div role="contentinfo" class="footer">
+            <footer>
+                {% include site/footer.html %}
+            </footer>
+        </div>
+
     </div>
 
 </body>
