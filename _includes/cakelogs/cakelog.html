@@ -1,22 +1,22 @@
 
+{% include helpers/get-person-for-cakelog cakelog=cakelog %}
+{% include helpers/get-tags-for-cakelog cakelog=cakelog %}
+
 <!-- Cakelog -->
 <div>
     <h3>
         <time datetime="{{cakelog.date | date: '%Y-%m-%dT%H:%M:%SZ'}}">{{cakelog.date | date: '%d %B %Y'}}</time>:
-        {% for person in site.data.people %}
-            {% if cakelog.person == person.id %}
-                {{person.name}}
-            {% endif %}
-        {% endfor %}
+        {{person.name}}
         brought cake in!
     </h3>
     <p>
         {{cakelog.description}}
     </p>
-    <ul class="tag-list">
-        {% assign tags = cakelog.tags | sort %}
-        {% for tag in tags %}
-            <li>{{tag}}</li>
-        {% endfor %}
-    </ul>
+    {% unless tags == empty %}
+        <ul class="tag-list">
+            {% for tag in tags %}
+                <li>{{tag}}</li>
+            {% endfor %}
+        </ul>
+    {% endunless %}
 </div>

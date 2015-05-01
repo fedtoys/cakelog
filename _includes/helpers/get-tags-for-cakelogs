@@ -1,0 +1,12 @@
+
+{% assign _tagString = '' %}
+
+{% for _cakelog in include.cakelogs %}
+    {% for _tag in _cakelog.tags %}
+        {% unless _tagString contains _tag | prepend ',' %}
+            {% assign _tagString = _tagString | append: ',' | append: _tag %}
+        {% endunless %}
+    {% endfor %}
+{% endfor %}
+
+{% assign tags = _tagString | remove_first: ',' | split: ',' | sort %}

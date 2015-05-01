@@ -2,21 +2,23 @@
 layout: null
 ---
 
+{% include helpers/get-cakelogs %}
+{% assign cakelogs = cakelogs | reverse %}
+
 [
-    {% assign cakelogs = site.data.cakelogs | sort: 'date' | reverse %}
     {% for cakelog in cakelogs %}
-        {% assign person = null %}
-        {% for currentPerson in site.data.people %}
-            {% if cakelog.person == currentPerson.id %}
-                {% assign person = currentPerson %}
-            {% endif %}
-        {% endfor %}
+
+        {% include helpers/get-person-for-cakelog cakelog=cakelog %}
+        {% include helpers/get-tags-for-cakelog cakelog=cakelog %}
+
         {
             "date": "{{cakelog.date | date: '%Y-%m-%d'}}",
             "person": {{person | jsonify}},
             "description": {{cakelog.description | jsonify}},
-            "tags": {{cakelog.tags | sort | jsonify}}
+            "tags": {{tags | jsonify}}
         }
+
         {% unless forloop.last %},{% endunless %}
+
     {% endfor %}
 ]

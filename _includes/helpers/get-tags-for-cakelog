@@ -1,0 +1,2 @@
+
+{% assign tags = include.cakelog.tags | sort %}

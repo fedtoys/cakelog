@@ -2,47 +2,36 @@
 layout: null
 ---
 
+{% include helpers/get-people %}
+
 [
-    {% assign people = site.data.people | sort: 'name' %}
-    {% assign cakelogs = site.data.cakelogs | sort: 'date' %}
     {% for person in people %}
 
-        {% assign personTags = '' %}
-
-        {% capture cakelogsJson %}
-            {% for cakelog in cakelogs %}
-                {% if cakelog.person == person.id %}
-                    {
-                        "date": "{{cakelog.date | date: '%Y-%m-%d'}}",
-                        "description": {{cakelog.description | jsonify}},
-                        "tags": {{cakelog.tags | sort | jsonify}}
-                    }
-                    {% for tag in cakelog.tags %}
-                        {% unless personTags contains tag | prepend ',' %}
-                            {% assign personTags = personTags | append: ',' | append: tag %}
-                        {% endunless %}
-                    {% endfor %}
-                    [SPLIT]
-                {% endif %}
-            {% endfor %}
-        {% endcapture %}
-
-        {% assign cakelogsJson = cakelogsJson | split: '[SPLIT]' %}
-        {% assign personTags = personTags | remove_first: ',' | split: ',' | sort %}
+        {% include helpers/get-cakelogs-for-person person=person %}
+        {% include helpers/get-tags-for-cakelogs cakelogs=cakelogs %}
 
         {
             "id": {{person.id | jsonify}},
             "name": {{person.name | jsonify}},
-            "tags": {{personTags | jsonify}},
+            "tags": {{tags | jsonify}},
             "cakelogs": [
-                {% for cakelog in cakelogsJson %}
-                    {% if forloop.rindex > 1 %}
-                        {{cakelog}}
-                        {% unless forloop.rindex == 2 %},{% endunless %}
-                    {% endif %}
+                {% for cakelog in cakelogs %}
+
+                    {% include helpers/get-tags-for-cakelog cakelog=cakelog %}
+
+                    {
+                        "date": "{{cakelog.date | date: '%Y-%m-%d'}}",
+                        "description": {{cakelog.description | jsonify}},
+                        "tags": {{tags | jsonify}}
+                    }
+
+                    {% unless forloop.last %},{% endunless %}
+
                 {% endfor %}
             ]
         }
+
         {% unless forloop.last %},{% endunless %}
+
     {% endfor %}
 ]

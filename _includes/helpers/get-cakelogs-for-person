@@ -1,0 +1,9 @@
+
+{% assign _cakelogsByPerson = site.data.cakelogs | sort: 'date' | group_by: 'person' %}
+{% assign cakelogs = null %}
+
+{% for _cakelogGroup in _cakelogsByPerson %}
+    {% if include.person.id == _cakelogGroup.name %}
+        {% assign cakelogs = _cakelogGroup.items %}
+    {% endif %}
+{% endfor %}

@@ -1,11 +1,6 @@
 
-{% assign count = 0 %}
-
-{% for cakelog in site.data.cakelogs %}
-    {% if cakelog.person == person.id %}
-        {% assign count = count | plus: 1 %}
-    {% endif %}
-{% endfor %}
+{% include helpers/get-cakelogs-for-person person=person %}
+{% include helpers/get-tags-for-cakelogs cakelogs=cakelogs %}
 
 <!-- Person -->
 <div>
@@ -13,6 +8,13 @@
         {{person.name}}
     </h3>
     <p>
-        Brought in cakes {{count}} times.
+        Brought in cakes {{cakelogs | size}} times.
     </p>
+    {% unless tags == empty %}
+        <ul class="tag-list">
+            {% for tag in tags %}
+                <li>{{tag}}</li>
+            {% endfor %}
+        </ul>
+    {% endunless %}
 </div>

@@ -1,0 +1,8 @@
+
+{% assign person = null %}
+
+{% for _person in site.data.people %}
+    {% if include.cakelog.person == _person.id %}
+        {% assign person = _person %}
+    {% endif %}
+{% endfor %}

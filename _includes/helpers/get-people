@@ -1,0 +1,2 @@
+
+{% assign people = site.data.people | sort: 'name' %}

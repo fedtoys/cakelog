@@ -1,5 +1,6 @@
 
-{% assign cakelogs = site.data.cakelogs | sort: 'date' | reverse %}
+{% include helpers/get-cakelogs %}
+{% assign cakelogs = cakelogs | reverse %}
 
 <!-- Cakelogs -->
 <ol>

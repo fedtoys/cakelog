@@ -1,0 +1,2 @@
+
+{% assign cakelogs = site.data.cakelogs | sort: 'date' %}
