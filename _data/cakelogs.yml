@@ -59,3 +59,13 @@
     - cinnamon
     - nordic-bakery
     - cake-for-breakfast
+
+- date: 2015-05-01
+  person: rowan
+  description: "Loads of Krispy Kreme"
+  tags:
+    - krispy-kreme
+    - donut
+    - tesco
+    - friday-lunch
+    - pudding
