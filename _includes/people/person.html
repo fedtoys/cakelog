@@ -1,17 +1,21 @@
 
 {% include helpers/get-cakelogs-for-person person=person %}
 {% include helpers/get-tags-for-cakelogs cakelogs=cakelogs %}
+{% assign cakelogCount = cakelogs | size %}
 
 <!-- Person -->
-<div>
+<div class="person {% if person.isFED %}person-is-fed{% endif %} {% if person.hasLeft %}person-has-left{% endif %} {% if cakelogCount < 1 %}person-is-stingy{% endif %}">
     {% if person.image %}
         <img src="image/person/{{person.image}}" alt="{{person.name}}" width="40" height="40" class="person-image"/>
     {% endif %}
     <h3>
         {{person.name}}
+        {% if person.hasLeft %}
+            (<abbr title="RIP to our fallen comrade">RIP</abbr>)
+        {% endif %}
     </h3>
     <p>
-        Brought in cakes {{cakelogs | size}} times.
+        Brought in cakes <b>{{cakelogCount}}</b> times.
     </p>
     {% unless tags == empty %}
         <ul class="tag-list">

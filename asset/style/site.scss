@@ -48,6 +48,9 @@ li {
     padding-left: 0;
 }
 
+
+// Tags
+
 .tag-list {
     max-width: 400px;
     margin: 0;
@@ -64,6 +67,13 @@ li {
         border: 1px solid #ccc;
         border-radius: .3em;
     }
+}
+
+
+// People
+
+.person-is-stingy {
+    opacity: .2;
 }
 
 .person-image {
