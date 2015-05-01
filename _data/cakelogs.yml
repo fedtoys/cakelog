@@ -28,3 +28,11 @@
     - fruit
     - chocolate
     - peanut-butter
+
+- date: 2015-05-01
+  person: walker
+  description: Lovely warm cinnamon buns
+  tags:
+    - cinnamon
+    - nordic-bakery
+    - cake-for-breakfast
