@@ -10,6 +10,20 @@
 # tags: should be a list of tags for the cake. Each tag must be lowercased and hyphenated
 #
 
+- date: 2015-02-26
+  person: phil
+  description: "Kinder Surprises for nice people who favourited Phil's mix."
+  tags:
+    - kinder-surprise
+    - newsagent
+
+- date: 2015-04-09
+  person: phil
+  description: "Kinder Surprises for nice people who starred Phil's repo."
+  tags:
+    - kinder-surprise
+    - newsagent
+
 - date: 2015-04-24
   person: glynn
   description: "Lemon & Thyme cake. Homemade. Phil didn't get any."
