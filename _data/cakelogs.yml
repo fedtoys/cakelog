@@ -10,6 +10,14 @@
 # tags: should be a list of tags for the cake. Each tag must be lowercased and hyphenated
 #
 
+- date: 2015-01-30
+  person: glynn
+  description: "Chocolte cake for Rowan's birthday. Homemade"
+  tags:
+    - chocolate
+    - chocolate-ganache
+    - birthday
+
 - date: 2015-02-26
   person: phil
   description: "Kinder Surprises for nice people who favourited Phil's mix."
