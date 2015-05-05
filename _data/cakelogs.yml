@@ -12,7 +12,7 @@
 
 - date: 2015-01-30
   person: glynn
-  description: "Chocolte cake for Rowan's birthday. Homemade"
+  description: "Chocolte cake for Rowan's birthday. Homemade."
   tags:
     - chocolate
     - chocolate-ganache
@@ -64,7 +64,7 @@
 
 - date: 2015-05-01
   person: walker
-  description: "Lovely warm cinnamon buns"
+  description: "Lovely warm cinnamon buns."
   tags:
     - cinnamon
     - nordic-bakery
@@ -72,7 +72,7 @@
 
 - date: 2015-05-01
   person: rowan
-  description: "Loads of Krispy Kreme"
+  description: "Loads of Krispy Kreme."
   tags:
     - krispy-kreme
     - donut
@@ -82,7 +82,7 @@
 
 - date: 2015-05-05
   person: phil
-  description: "8 x rocky roads, 8 x chocolate brownies"
+  description: "8 x rocky roads, 8 x chocolate brownies."
   tags:
     - rocky-road
     - chocolate-brownie
