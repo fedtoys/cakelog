@@ -150,3 +150,12 @@
     - millionaire
     - shortbread
     - tesco
+
+- date: 2015-05-26
+  person: walker
+  description: "Vanilla Crowns and Cinnamon Swirls."
+  tags:
+    - cinnamon
+    - vanilla
+    - pastry
+    - tesco
