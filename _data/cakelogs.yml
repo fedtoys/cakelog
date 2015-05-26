@@ -159,3 +159,12 @@
     - vanilla
     - pastry
     - tesco
+
+- date: 2015-05-26
+  person: rowan
+  description: "5 x chocolate doughnuts, 5 x custard doughnuts and 5 x jam doughnuts."
+  tags:
+    - chocolate-doughnuts
+    - custard-doughnuts
+    - jam-doughnuts
+    - tesco
