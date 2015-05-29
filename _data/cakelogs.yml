@@ -130,7 +130,7 @@
 
 - date: 2015-05-18
   person: phil
-  description: "6 x double chocolate gateau slices, 6 x strawberry gateau slices for Phil's second work anniversary and Andrew Mee's 29th birthday. more cake than has ever been seen in the same place, except for the cake shop."
+  description: "6 x double chocolate gateau slices, 6 x strawberry gateau slices for Phil's second work anniversary and Andrew Mee's 29th birthday. More cake than has ever been seen in the same place, except for the cake shop."
   tags:
     - gateau
     - chocolate
@@ -168,3 +168,12 @@
     - custard-doughnuts
     - jam-doughnuts
     - tesco
+
+- date: 2015-05-29
+  person: phil
+  description: "Flapjacks. Moist. Like Rowan's Mum."
+  tags:
+    - flapjacks
+    - hangover-cakes
+    - tesco
+
