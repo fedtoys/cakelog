@@ -177,3 +177,13 @@
     - hangover-cakes
     - tesco
 
+- date: 2015-06-04
+  person: phil
+  description: "5 x triple chocolate cookies, 5 x oatmeal and raisin cookies."
+  tags:
+    - cookie
+    - chocolate
+    - oatmeal
+    - raisin
+    - tesco
+
