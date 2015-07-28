@@ -210,7 +210,7 @@
 
 - date: 2015-06-22
   person: phil
-  description: "153 grams of Galaxy Minstrels, 141 grams of crispy M&Ms"
+  description: "153 grams of Galaxy Minstrels, 141 grams of crispy M&Ms."
   tags:
     - chocolate
     - m&ms
@@ -218,3 +218,28 @@
     - minstrels
     - leaving cakes
 
+- date: 2015-07-28
+  person: rowan
+  description: "5 x milk chocolate chip cookies, 5 x white chocolate chip cookies, 5 x oat and raisin cookies."
+  tags:
+    - cookies
+    - chocolate
+    - white-chocolate
+    - oat-and-raisin
+    - tesco
+
+- date: 2015-07-28
+  person: glynn
+  description: "12 Cadbury's Mini Rolls."
+  tags:
+    - cadbury
+    - min-rolls
+    - chocolate
+    - tesco
+
+- date: 2015-07-28
+  person: nick
+  description: "Lots of stroopwafels."
+  tags:
+    - stroopwafels
+    - tesco
